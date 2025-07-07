@@ -7,11 +7,11 @@ function App() {
   return (
     <>
       <header class="flex justify-between pt-5 pl-5 pr-5 h-fit w-screen fixed">
-        <img src="logojr.png" class="h-[30px]"/>
+        <img src="logojr.png" class="h-[40px]"/>
         <IoMenu class="text-[35px] text-[#3148D2]"/>
       </header>
       <main class="h-screen flex flex-col items-center">
-        <p class="pt-[70px] text-[#3148D2] font-[550] leading-none text-[35px] text-center mb-5">Descomplique seus <br/>Direitos de Consumidor.</p>
+        <p class="pt-[80px] text-[#3148D2] font-[550] leading-none text-[35px] text-center mb-5">Descomplique seus <br/>Direitos de Consumidor.</p>
         <p class="text-[#2B2B2B] leading-tight text-[20px] text-center">Especialista em Direito do Consumidor,<br/>te ajudo a entender cada passo.</p>
 
         <div class="h-fit">
