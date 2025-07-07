@@ -1,6 +1,7 @@
 import { IoMenu } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaSquare } from "react-icons/fa";
+import { Container } from "postcss";
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
         <IoMenu class="text-[35px] text-[#3148D2]"/>
       </header>
 
-      <main class="h-screen flex flex-col items-center  md:flex-row md:justify-center md:gap-[50px] lg:gap-[170px] xl:gap-[330px]">
+      <main class="h-fit md:pt-[60px] lg:pt-0 flex flex-col items-center  md:flex-row md:justify-center md:gap-[50px] lg:gap-[170px] xl:h-[800px] xl:gap-[330px] xl:pt-[50px] xl:pb-[60px]">
         <div>
           <p class="pt-[85px] text-[#3148D2] font-[550] leading-none md:leading-[45px] lg:leading-[60px] xl:leading-[80px] text-[35px] text-center mb-5 md:text-left lg:text-[45px] xl:text-[60px] ">Descomplique seus <br/>Direitos de Consumidor.</p>
           <p class="text-[#2B2B2B] leading-tight font-[450] text-[20px] mt-[30px] text-center md:text-left lg:text-[30px] xl:text-[35px]">Ajudo você a entender e garantir que <br/>seus direitos sejam respeitados.</p>
@@ -32,6 +33,24 @@ function App() {
         </button>
           <p class="md:hidden flex items-center text-[#2B2B2B] text-[14px] mt-4"><FaSquare class="text-[7px] text-[#3148D2] mr-2"/>Atendimento 24 horas</p>
           <p class="md:hidden flex items-center text-[#2B2B2B] text-[14px]"><FaSquare class="text-[7px] text-[#d23131] mr-2"/>Em caso de urgência ligue, clique aqui.</p>
+        </div>
+
+      </main>
+
+      <main class="h-fit py-[50px] bg-[#3148D2] mt-[50px] flex flex-col justify-center items-center gap-[40px]">
+        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-[137px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center">
+          <p class="text-[#3148D2] font-[550] text-[20px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] leading-[25px] ">Cobranças Abusivas? Eu Resolvo.</p>
+          <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >Luto contra pagamentos indevidos em sua fatura e garantimos sua restituição em dobro.</p>  
+        </div>
+
+        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-[137px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center">
+          <p class="text-[#3148D2] font-[550] text-[20px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] leading-[25px] ">Produto ou Serviço com Defeito?</p>
+          <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >Garanto a troca, o conserto, a devolução do dinheiro ou a execução correta do que foi contratado.</p>  
+        </div>
+
+        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-[137px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center">
+          <p class="text-[#3148D2] font-[550] text-[20px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] leading-[25px] ">Foi Enganado Pela Publicidade?</p>
+          <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >Combato propagandas falsas e abusivsa, assegurando seus direitos contra promessas não cumpridas.</p>  
         </div>
 
       </main>
