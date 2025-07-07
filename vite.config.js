@@ -5,15 +5,7 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    react() // Keep the React plugin
+    react() // Mantenha o plugin do React
   ],
-  // Add PostCSS configuration here for Tailwind CSS
-  css: {
-    postcss: {
-      plugins: [
-        require('tailwindcss'), // Make sure tailwindcss is installed as a dev dependency (it is!)
-        require('autoprefixer'), // Make sure autoprefixer is installed as a dev dependency (it is!)
-      ],
-    },
-  },
+  // Não precisa do bloco 'css.postcss' aqui se você estiver usando um postcss.config.js
 });
