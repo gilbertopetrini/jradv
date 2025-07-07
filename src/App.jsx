@@ -7,11 +7,11 @@ function App() {
   return (
     <>
       <header class="flex justify-between pt-5 pl-5 pr-5 h-fit w-screen fixed">
-        <img src="logojr.png" class="w-30 "/>
+        <img src="logojr.png" class="h-[30px]"/>
         <IoMenu class="text-[35px] text-[#3148D2]"/>
       </header>
       <main class="h-screen flex flex-col items-center">
-        <p class="pt-25 text-[#3148D2] font-[550] leading-none text-[35px] text-center mb-5">Descomplique seus <br/>Direitos de Consumidor.</p>
+        <p class="pt-[70px] text-[#3148D2] font-[550] leading-none text-[35px] text-center mb-5">Descomplique seus <br/>Direitos de Consumidor.</p>
         <p class="text-[#2B2B2B] leading-tight text-[20px] text-center">Especialista em Direito do Consumidor,<br/>te ajudo a entender cada passo.</p>
 
         <div class="h-fit">
@@ -22,7 +22,7 @@ function App() {
             Falar no Whatsapp <FaArrowRight class="flex justify-center items-center"/>
           </button>
           <p class="flex items-center text-[#2B2B2B] text-[14px] mt-4"><FaSquare class="text-[7px] text-[#3148D2] mr-2"/>Atendimento 24 horas</p>
-          <p class="flex items-center text-[#2B2B2B] text-[14px]"><FaSquare class="text-[7px] text-[#3148D2] mr-2"/>Em caso de urgência ligue, clique aqui.</p>
+          <p class="flex items-center text-[#2B2B2B] text-[14px]"><FaSquare class="text-[7px] text-[#d23131] mr-2"/>Em caso de urgência ligue, clique aqui.</p>
         </div>
 
       </main>
