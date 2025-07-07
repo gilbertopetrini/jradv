@@ -11,7 +11,7 @@ function App() {
         <IoMenu class="text-[35px] text-[#3148D2]"/>
       </header>
       <main class="h-screen flex flex-col items-center">
-        <p class="pt-[80px] text-[#3148D2] font-[550] leading-none text-[35px] text-center mb-5">Descomplique seus <br/>Direitos de Consumidor.</p>
+        <p class="pt-[85px] text-[#3148D2] font-[550] leading-none text-[35px] text-center mb-5">Descomplique seus <br/>Direitos de Consumidor.</p>
         <p class="text-[#2B2B2B] leading-tight text-[20px] text-center">Especialista em Direito do Consumidor,<br/>te ajudo a entender cada passo.</p>
 
         <div class="h-fit">
