@@ -12,7 +12,7 @@ function App() {
   return (
     <>
 
-      <span class="backdrop-blur border-white/40 border flex flex-col h-[220px] w-[50px] bg-white/30 text-white text-[35px] justify-center items-center rounded-[20px] gap-4 fixed bottom-4 right-4 z-50 shadow-lg"><FaInstagram class="text-[#3148D2]"/><FaWhatsapp class="text-[#3148D2]"/><FaTiktok class="text-[#3148D2]"/><FaPix class="text-[#3148D2]"/></span>
+      <span class="backdrop-blur border-white/40 border flex flex-col h-[220px] w-[50px] bg-white/30 text-white text-[35px] justify-center items-center rounded-[20px] gap-4 fixed bottom-4 right-4 z-50 shadow-lg"><FaInstagram class="text-[#3148D2]" onClick={() => window.open("https://www.instagram.com/junioralmeida.rio", "_blank")}/><FaWhatsapp onClick={() => window.open("https://api.whatsapp.com/send?phone=5521965811001", "_blank")} class="text-[#3148D2]"/><FaTiktok class="text-[#3148D2]" onClick={() => window.open("https://www.tiktok.com/@adv.junioralmeida", "_blank")}/><FaPix class="text-[#3148D2]"/></span>
 
       <header class="flex justify-between pt-5 md:pl-[65px] md:pr-[65px] lg:pl-[95px] lg:pr-[95px] xl:pr-[120px] xl:pl-[120px] pl-5 pr-5 h-fit w-screen fixed z-50">
         <img src="logojr.png" class="h-[40px]"/>
