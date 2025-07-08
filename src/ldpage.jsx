@@ -8,10 +8,10 @@ import { ToastContainer, toast, Slide } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-
 function Ldpage() {  
   const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(true);
+  const [nomew, setNomew] = useState('nome');
 
   function copiarTexto() {
       const texto = "116.318.197-80";
@@ -30,6 +30,9 @@ function Ldpage() {
       notify();
     }
 
+  const mensagem = `Olá Dr. Júnior! Me chamo ${nomew}. Vim pelo seu site e preciso da sua ajuda.`;
+  const linkWhatsApp = `https://wa.me/send?phone=5521965811001&text=${mensagem}`;
+  
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
   };
@@ -37,20 +40,20 @@ function Ldpage() {
   return (
     <>
 
-      {isVisible && (<span class="xl:bottom-[50px] xl:left-1/2 xl:-translate-x-1/2 backdrop-blur border-white/40 border flex flex-col xl:flex-row h-[220px] w-[50px] xl:w-[220px] xl:h-[50px] bg-white/30 text-white text-[35px] justify-center items-center rounded-[20px] gap-4 fixed bottom-4 right-4 z-40 shadow-lg"><FaInstagram class="text-[#3148D2] cursor-pointer z-40 " onClick={() => window.open("https://www.instagram.com/junioralmeida.rio", "_blank")}/><FaWhatsapp onClick={() => window.open("https://api.whatsapp.com/send?phone=5521965811001", "_blank")} class="text-[#3148D2] cursor-pointer"/><FaTiktok class="text-[#3148D2] cursor-pointer" onClick={() => window.open("https://www.tiktok.com/@adv.junioralmeida", "_blank")}/><FaPix class="text-[#3148D2] cursor-pointer" id="cpf" onClick={copiarTexto} /></span>)}
+      {isVisible && (<span class="xl:bottom-[50px] xl:left-1/2 xl:-translate-x-1/2 backdrop-blur border-white/40 border flex flex-col xl:flex-row h-[220px] w-[50px] xl:w-[220px] xl:h-[50px] bg-white/30 text-white text-[35px] justify-center items-center rounded-[20px] gap-4 fixed bottom-4 right-4 z-40 shadow-lg"><FaInstagram class="text-[#3148D2] cursor-pointer z-40 " onClick={() => window.open("https://www.instagram.com/junioralmeida.rio", "_blank")}/><a href={linkWhatsApp} target="_blank" class="text-[#3148D2] cursor-pointer"> <FaWhatsapp/> </a><FaTiktok class="text-[#3148D2] cursor-pointer" onClick={() => window.open("https://www.tiktok.com/@adv.junioralmeida", "_blank")}/><FaPix class="text-[#3148D2] cursor-pointer" id="cpf" onClick={copiarTexto} /></span>)}
       <ToastContainer />
       <header class="flex items-center justify-between pt-5 md:pl-[65px] md:pr-[65px] lg:pl-[95px] lg:pr-[95px] xl:pr-[120px] xl:pl-[120px] pl-5 pr-5 h-fit w-screen fixed z-50">
         <img src="logojr.png" class="h-[40px]"/>
         <button onClick={toggleVisibility} class="shadow-md flex items-center text-white bg-[#3148D2] text-[12px] justify-center h-[26px] w-[100px]  rounded-lg">{isVisible ? 'Ocultar Menu' : 'Mostrar Menu'}</button>
       </header>
 
-      <main class="h-fit md:pt-[60px] lg:pt-0 flex flex-col items-center  md:flex-row md:justify-center md:gap-[50px] lg:gap-[170px] xl:h-[800px] xl:gap-[330px] xl:pt-[50px] xl:pb-[60px]">
+      <main class="h-fit md:pt-[60px] lg:pt-0 flex flex-col items-center  md:flex-row md:justify-center md:gap-[50px] lg:gap-[170px] xl:h-fit xl:gap-[180px] xl:pt-[50px] xl:pb-[60px]">
         <div>
           <p class="pt-[110px] text-[#3148D2] font-[550] leading-none md:leading-[45px] lg:leading-[60px] xl:leading-[80px] text-[35px] text-center mb-5 md:text-left lg:text-[45px] xl:text-[60px] ">Descomplique seus <br/>Direitos de Consumidor.</p>
           <p class="text-[#2B2B2B] leading-tight font-[450] text-[20px] mt-[30px] text-center md:text-left lg:text-[30px] xl:text-[35px]">Ajudo você a entender e garantir que <br/>seus direitos sejam respeitados.</p>
 
           <a onClick={() => navigate('/atendimento ')} class=" w-[313px] text-[22px] h-[70px] bg-[#3148D2] font-[450] flex justify-center items-center text-white gap-2 rounded-[15px] mt-[40px] cursor-pointer hidden md:flex">
-            Atendimento virtual <FaArrowRight class="flex justify-center items-center text-[19px]"/>
+            Iniciar Atendimento <FaArrowRight class="flex justify-center items-center text-[19px]"/>
           </a>
           <p class="flex items-center text-[#2B2B2B] text-[14px] mt-[30px] hidden ml-2 md:flex"><FaSquare class="text-[7px] text-[#3148D2] mr-2 "/>Atendimento 24 horas</p>
           <p onClick={() => window.open("https://api.whatsapp.com/send?phone=5521965811001&text=%F0%9F%9A%A8%20URGENTE!%0A%0AOl%C3%A1%2C%20Dr.%20J%C3%BAnior%20Almeida.%20Estou%20passando%20por%20uma%20emerg%C3%AAncia%20jur%C3%ADdica%20e%20preciso%20de%20ajuda%20o%20mais%20r%C3%A1pido%20poss%C3%ADvel.%20%0A%0APoderia%20me%20atender%20com%20urg%C3%AAncia%2C%20por%20favor%3F")} class=" flex items-center text-[#2B2B2B] text-[14px] hidden md:flex ml-2"><FaSquare class="text-[7px] text-[#d23131] mr-2 "/>Em caso de urgência,<span class="text-[#d23131] ml-1 cursor-pointer">clique aqui.</span></p>
@@ -61,8 +64,8 @@ function Ldpage() {
             <img src="jr.png" class="w-[300px] absolute bottom-0 lg:w-[350px] xl:w-[400px]"/>
           </div>
           <a onClick={() => navigate('/atendimento ')} class="md:hidden w-[313px] text-[22px] h-[70px] bg-[#3148D2] font-[450] flex justify-center items-center text-white gap-2 rounded-[15px] mt-[30px] cursor-pointer">
-          Atendimento virtual <FaArrowRight class="flex justify-center items-center text-[19px]"/>
-        </a>
+            Iniciar Atendimento <FaArrowRight class="flex justify-center items-center text-[19px]"/>
+          </a>
           <p class="md:hidden flex items-center text-[#2B2B2B] text-[14px] mt-4"><FaSquare class="text-[7px] text-[#3148D2] mr-2"/>Atendimento 24 horas</p>
           <p onClick={() => window.open("https://api.whatsapp.com/send?phone=5521965811001&text=%F0%9F%9A%A8%20URGENTE!%0A%0AOl%C3%A1%2C%20Dr.%20J%C3%BAnior%20Almeida.%20Estou%20passando%20por%20uma%20emerg%C3%AAncia%20jur%C3%ADdica%20e%20preciso%20de%20ajuda%20o%20mais%20r%C3%A1pido%20poss%C3%ADvel.%20%0A%0APoderia%20me%20atender%20com%20urg%C3%AAncia%2C%20por%20favor%3F")} class="md:hidden flex items-center text-[#2B2B2B] text-[14px]"><FaSquare class="text-[7px] text-[#d23131] mr-2"/>Em caso de urgência ligue,<span class="text-[#d23131] ml-1 cursor-pointer">clique aqui.</span></p>
         </div>
@@ -71,29 +74,37 @@ function Ldpage() {
 
       <main class="h-fit py-[50px] bg-[#3148D2] mt-[50px] flex flex-col justify-center items-center gap-[40px] relative">
         <img src="wpp.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover opacity-20 pointer-events-none" />
-        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-[137px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
-          <p class="text-[#3148D2] font-[550] text-[20px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] leading-[25px] ">Cobranças Abusivas? Eu Resolvo.</p>
-          <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >Luto contra pagamentos indevidos em sua fatura e garantimos sua restituição em dobro.</p>  
+        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-[130px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
+          <p class="text-[#3148D2] font-[550] text-[17px] leading-[20px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] xl:w-[700px] leading-[25px] ">Foi endividado por uma dívida que não reconhece?</p>
+          <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >O consumidor tem direito à imediata exclusão do registro e reparação pelos
+prejuízos.
+</p>  
         </div>
 
-        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-[137px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
-          <p class="text-[#3148D2] font-[550] text-[20px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] leading-[25px] ">Produto ou Serviço com Defeito?</p>
-          <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >Garanto a troca, o conserto, a devolução do dinheiro ou a execução correta do que foi contratado.</p>  
+        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px]  md:h-[160px] h-[145px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
+          <p class="text-[#3148D2] font-[550] text-[17px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] xl:w-[700px] leading-[20px] md:leading-[30px]">Teve o pagamento do seguro recusado mesmo cumprindo os
+requisitos?</p>
+          <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >Se você pagou corretamente, pode exigir o contrato ou indenização. Recusa sem motivo é abusiva.</p>  
         </div>
 
-        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-[137px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
-          <p class="text-[#3148D2] font-[550] text-[20px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] leading-[25px] ">Foi Enganado Pela Publicidade?</p>
-          <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >Combato propagandas falsas e abusivas, assegurando seus direitos contra promessas não cumpridas.</p>  
+        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-[140px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
+          <p class="text-[#3148D2] font-[550] text-[17px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] xl:w-[700px] leading-[20px] ">Instagram hackeado ou desativado?</p>
+          <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >O Golpe do PIX acontece por fraude ou engano. A vítima pode exigir devolução imediata e indenização por danos morais.</p>  
+        </div>
+
+        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-[125px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
+          <p class="text-[#3148D2] font-[550] text-[17px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] xl:w-[700px] leading-[25px] ">Caiu no golpe do PIX?</p>
+          <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >O Golpe do PIX acontece por fraude ou engano. A vítima pode exigir devolução imediata e indenização por danos morais.</p>  
         </div>
 
       </main>
-      <footer class="bg-white h-[700px] md:h-[600px] flex flex-col items-center relative px-[25px] sm:px-[50px] xl:px-[90px]">
+      <footer class="bg-white h-[700px] md:h-[600px] flex flex-col items-center relative px-[25px] sm:px-[50px] xl:px-[90px] xl:h-screen">
         <p class="text-[#3148D2] font-[550] text-[30px] pt-[25px] lg:text-[40px]">Dr. Júnior Almeida</p>
         <p class="lg:text-[19px]">OAB/RJ n. 219.362</p>
 
         <div class="flex items-center flex-col-reverse md:flex-row">
           <div class="xl:w-[800px]">
-          <p class="text-[16px] sm:text-[21px] lg:text-[24px] xl:text-[28px] pt-[20px] text-justify mr-[30px] xl:mr-[70px]">Sou o Júnior Almeida, me especializei em <span class="text-[#3148D2]">Advocacia Cível</span> e <span class="text-[#3148D2]">Trabalhista</span> pela Universidade Castelo Branco e atuo como Advogado do Consumidor.</p>
+          <p class="text-[16px] sm:text-[21px] lg:text-[24px] xl:text-[28px] pt-[20px] text-justify mr-[30px] xl:mr-[70px]">Dr. Junior Almeida é advogado regularmente inscrito na <span class="text-[#3148D2]">OAB/RJ</span>, graduado pela Universidade Estácio de Sá. Possui especialização em <span class="text-[#3148D2]">Direito do Consumidor</span> e <span class="text-[#3148D2]">Direito Digital</span>.</p>
           <p class="text-[16px] sm:text-[21px] lg:text-[24px] xl:text-[28px] mt-[20px] text-justify hidden mr-[70px] xl:flex">Meu foco é garantir que os direitos dos consumidores sejam respeitados, com  excelência e comprometimento.</p>
 
           </div>
