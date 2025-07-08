@@ -1,7 +1,5 @@
-import { IoMenu } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaSquare } from "react-icons/fa";
-import { Container } from "postcss";
 import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
