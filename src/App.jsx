@@ -2,11 +2,18 @@ import { IoMenu } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaSquare } from "react-icons/fa";
 import { Container } from "postcss";
+import { FaInstagram } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+import { FaPix } from "react-icons/fa6";
 
 function App() {
 
   return (
     <>
+
+      <span class="backdrop-blur border-white/40 border flex flex-col h-[220px] w-[50px] bg-white/30 text-white text-[35px] justify-center items-center rounded-[20px] gap-4 fixed bottom-4 right-4 z-50 shadow-lg"><FaInstagram class="text-[#3148D2]"/><FaWhatsapp class="text-[#3148D2]"/><FaTiktok class="text-[#3148D2]"/><FaPix class="text-[#3148D2]"/></span>
+
       <header class="flex justify-between pt-5 md:pl-[65px] md:pr-[65px] lg:pl-[95px] lg:pr-[95px] xl:pr-[120px] xl:pl-[120px] pl-5 pr-5 h-fit w-screen fixed z-50">
         <img src="logojr.png" class="h-[40px]"/>
         <IoMenu class="text-[35px] text-[#3148D2]"/>
@@ -20,8 +27,8 @@ function App() {
           <a class=" w-[313px] text-[22px] h-[70px] bg-[#3148D2] font-[450] flex justify-center items-center text-white gap-2 rounded-[15px] mt-[40px] cursor-pointer hidden md:flex">
             Atendimento virtual <FaArrowRight class="flex justify-center items-center text-[19px]"/>
           </a>
-          <p class="flex items-center text-[#2B2B2B] text-[14px] mt-[30px] hidden ml-2 md:flex"><FaSquare class="text-[7px] text-[#3148D2] mr-2"/>Atendimento 24 horas</p>
-          <p class="flex items-center text-[#2B2B2B] text-[14px] hidden md:flex ml-2"><FaSquare class="text-[7px] text-[#d23131] mr-2"/>Em caso de urgência ligue, clique aqui.</p>
+          <p class="flex items-center text-[#2B2B2B] text-[14px] mt-[30px] hidden ml-2 md:flex"><FaSquare class="text-[7px] text-[#3148D2] mr-2 "/>Atendimento 24 horas</p>
+          <p class="flex items-center text-[#2B2B2B] text-[14px] hidden md:flex ml-2"><FaSquare class="text-[7px] text-[#d23131] mr-2 "/>Em caso de urgência ligue, clique aqui.</p>
         </div>
         
         <div class="h-fit relative">
