@@ -90,7 +90,7 @@ function App() {
           <p class="text-[16px] sm:text-[21px] lg:text-[24px] xl:text-[28px] mt-[20px] text-justify hidden mr-[70px] xl:flex">Meu foco é garantir que os direitos dos consumidores sejam respeitados, com  excelência e comprometimento.</p>
 
           </div>
-          <img src="jr2.png" class="h-[200px] w-[200px] mt-[20px] rounded-[15px] xl:h-[300px] xl:w-[300px]" />
+          <img src="jr2.png" class="h-[200px] w-[200px] mt-[20px] rounded-[15px] xl:h-[300px] xl:w-[300px] shadow-md" />
         </div>
         <p class="text-[16px] sm:text-[21px] lg:text-[24px] mt-[20px] text-justify xl:hidden ">Meu foco é garantir que os direitos dos consumidores sejam respeitados, com  excelência e comprometimento.</p>
 
