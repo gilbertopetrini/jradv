@@ -6,14 +6,32 @@ import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaPix } from "react-icons/fa6";
+import { ToastContainer, toast, Slide } from 'react-toastify';
 
-function App() {
 
+
+function App() {  
+  function copiarTexto() {
+      const texto = "116.318.197-80";
+      navigator.clipboard.writeText(texto)
+      toast.info('Chave PIX copiada!', {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+      });
+      notify();
+    }
   return (
     <>
 
-      <span class="backdrop-blur border-white/40 border flex flex-col h-[220px] w-[50px] bg-white/30 text-white text-[35px] justify-center items-center rounded-[20px] gap-4 fixed bottom-4 right-4 z-50 shadow-lg"><FaInstagram class="text-[#3148D2]" onClick={() => window.open("https://www.instagram.com/junioralmeida.rio", "_blank")}/><FaWhatsapp onClick={() => window.open("https://api.whatsapp.com/send?phone=5521965811001", "_blank")} class="text-[#3148D2]"/><FaTiktok class="text-[#3148D2]" onClick={() => window.open("https://www.tiktok.com/@adv.junioralmeida", "_blank")}/><FaPix class="text-[#3148D2]"/></span>
-
+      <span class="backdrop-blur border-white/40 border flex flex-col h-[220px] w-[50px] bg-white/30 text-white text-[35px] justify-center items-center rounded-[20px] gap-4 fixed bottom-4 right-4 z-50 shadow-lg"><FaInstagram class="text-[#3148D2] cursor-pointer" onClick={() => window.open("https://www.instagram.com/junioralmeida.rio", "_blank")}/><FaWhatsapp onClick={() => window.open("https://api.whatsapp.com/send?phone=5521965811001", "_blank")} class="text-[#3148D2] cursor-pointer"/><FaTiktok class="text-[#3148D2] cursor-pointer" onClick={() => window.open("https://www.tiktok.com/@adv.junioralmeida", "_blank")}/><FaPix class="text-[#3148D2] cursor-pointer" id="cpf" onClick={copiarTexto} /></span>
+      <ToastContainer />
       <header class="flex justify-between pt-5 md:pl-[65px] md:pr-[65px] lg:pl-[95px] lg:pr-[95px] xl:pr-[120px] xl:pl-[120px] pl-5 pr-5 h-fit w-screen fixed z-50">
         <img src="logojr.png" class="h-[40px]"/>
         <IoMenu class="text-[35px] text-[#3148D2]"/>
@@ -28,7 +46,7 @@ function App() {
             Atendimento virtual <FaArrowRight class="flex justify-center items-center text-[19px]"/>
           </a>
           <p class="flex items-center text-[#2B2B2B] text-[14px] mt-[30px] hidden ml-2 md:flex"><FaSquare class="text-[7px] text-[#3148D2] mr-2 "/>Atendimento 24 horas</p>
-          <p class="flex items-center text-[#2B2B2B] text-[14px] hidden md:flex ml-2"><FaSquare class="text-[7px] text-[#d23131] mr-2 "/>Em caso de urgência ligue, clique aqui.</p>
+          <p onClick={() => window.open("https://api.whatsapp.com/send?phone=5521965811001&text=%F0%9F%9A%A8%20URGENTE!%0A%0AOl%C3%A1%2C%20Dr.%20J%C3%BAnior%20Almeida.%20Estou%20passando%20por%20uma%20emerg%C3%AAncia%20jur%C3%ADdica%20e%20preciso%20de%20ajuda%20o%20mais%20r%C3%A1pido%20poss%C3%ADvel.%20%0A%0APoderia%20me%20atender%20com%20urg%C3%AAncia%2C%20por%20favor%3F")} class=" flex items-center text-[#2B2B2B] text-[14px] hidden md:flex ml-2"><FaSquare class="text-[7px] text-[#d23131] mr-2 "/>Em caso de urgência,<span class="text-[#d23131] ml-1 cursor-pointer">clique aqui.</span></p>
         </div>
         
         <div class="h-fit relative">
@@ -39,7 +57,7 @@ function App() {
           Atendimento virtual <FaArrowRight class="flex justify-center items-center text-[19px]"/>
         </a>
           <p class="md:hidden flex items-center text-[#2B2B2B] text-[14px] mt-4"><FaSquare class="text-[7px] text-[#3148D2] mr-2"/>Atendimento 24 horas</p>
-          <p class="md:hidden flex items-center text-[#2B2B2B] text-[14px]"><FaSquare class="text-[7px] text-[#d23131] mr-2"/>Em caso de urgência ligue, clique aqui.</p>
+          <p onClick={() => window.open("https://api.whatsapp.com/send?phone=5521965811001&text=%F0%9F%9A%A8%20URGENTE!%0A%0AOl%C3%A1%2C%20Dr.%20J%C3%BAnior%20Almeida.%20Estou%20passando%20por%20uma%20emerg%C3%AAncia%20jur%C3%ADdica%20e%20preciso%20de%20ajuda%20o%20mais%20r%C3%A1pido%20poss%C3%ADvel.%20%0A%0APoderia%20me%20atender%20com%20urg%C3%AAncia%2C%20por%20favor%3F")} class="md:hidden flex items-center text-[#2B2B2B] text-[14px]"><FaSquare class="text-[7px] text-[#d23131] mr-2"/>Em caso de urgência ligue,<span class="text-[#d23131] ml-1 cursor-pointer">clique aqui.</span></p>
         </div>
 
       </main>
