@@ -89,7 +89,7 @@ requisitos?</p>
 
         <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-[140px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
           <p class="text-[#3148D2] font-[550] text-[17px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] xl:w-[700px] leading-[20px] ">Instagram hackeado ou desativado?</p>
-          <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >O Golpe do PIX acontece por fraude ou engano. A vítima pode exigir devolução imediata e indenização por danos morais.</p>  
+          <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >O bloqueio injusto de contas em redes sociais fere direitos e pode causar prejuízos. É possível notificar a plataforma e buscar reparação judicial.</p>  
         </div>
 
         <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-[125px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
@@ -104,9 +104,8 @@ requisitos?</p>
 
         <div class="flex items-center flex-col-reverse md:flex-row">
           <div class="xl:w-[800px]">
-          <p class="text-[16px] sm:text-[21px] lg:text-[24px] xl:text-[28px] pt-[20px] text-justify mr-[30px] xl:mr-[70px]">Dr. Junior Almeida é advogado regularmente inscrito na <span class="text-[#3148D2]">OAB/RJ</span>, graduado pela Universidade Estácio de Sá. Possui especialização em <span class="text-[#3148D2]">Direito do Consumidor</span> e <span class="text-[#3148D2]">Direito Digital</span>.</p>
-          <p class="text-[16px] sm:text-[21px] lg:text-[24px] xl:text-[28px] mt-[20px] text-justify hidden mr-[70px] xl:flex">Meu foco é garantir que os direitos dos consumidores sejam respeitados, com  excelência e comprometimento.</p>
-
+            <p class="text-[16px] sm:text-[21px] lg:text-[24px] xl:text-[28px] pt-[20px] text-justify lg:mr-[30px] xl:mr-[70px]">Dr. Junior Almeida é advogado regularmente inscrito na <span class="text-[#3148D2]">OAB/RJ</span>, graduado pela Universidade Estácio de Sá. Possui especialização em <span class="text-[#3148D2]">Direito do Consumidor</span> e <span class="text-[#3148D2]">Direito Digital</span>.</p>
+            <p class="text-[16px] sm:text-[21px] lg:text-[24px] xl:text-[28px] mt-[20px] text-justify hidden mr-[70px] xl:flex">Meu foco é garantir que os direitos dos consumidores sejam respeitados, com  excelência e comprometimento.</p>
           </div>
           <img src="jr2.png" class="h-[200px] w-[200px] mt-[20px] rounded-[15px] xl:h-[300px] xl:w-[300px] shadow-md" />
         </div>
