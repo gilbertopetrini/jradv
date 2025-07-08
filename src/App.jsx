@@ -30,7 +30,7 @@ function App() {
   return (
     <>
 
-      <span class="backdrop-blur border-white/40 border flex flex-col h-[220px] w-[50px] bg-white/30 text-white text-[35px] justify-center items-center rounded-[20px] gap-4 fixed bottom-4 right-4 z-50 shadow-lg"><FaInstagram class="text-[#3148D2] cursor-pointer" onClick={() => window.open("https://www.instagram.com/junioralmeida.rio", "_blank")}/><FaWhatsapp onClick={() => window.open("https://api.whatsapp.com/send?phone=5521965811001", "_blank")} class="text-[#3148D2] cursor-pointer"/><FaTiktok class="text-[#3148D2] cursor-pointer" onClick={() => window.open("https://www.tiktok.com/@adv.junioralmeida", "_blank")}/><FaPix class="text-[#3148D2] cursor-pointer" id="cpf" onClick={copiarTexto} /></span>
+      <span class="backdrop-blur border-white/40 border flex flex-col h-[220px] w-[50px] bg-white/30 text-white text-[35px] justify-center items-center rounded-[20px] gap-4 fixed bottom-4 right-4 z-40 shadow-lg"><FaInstagram class="text-[#3148D2] cursor-pointer z-40 " onClick={() => window.open("https://www.instagram.com/junioralmeida.rio", "_blank")}/><FaWhatsapp onClick={() => window.open("https://api.whatsapp.com/send?phone=5521965811001", "_blank")} class="text-[#3148D2] cursor-pointer"/><FaTiktok class="text-[#3148D2] cursor-pointer" onClick={() => window.open("https://www.tiktok.com/@adv.junioralmeida", "_blank")}/><FaPix class="text-[#3148D2] cursor-pointer" id="cpf" onClick={copiarTexto} /></span>
       <ToastContainer />
       <header class="flex justify-between pt-5 md:pl-[65px] md:pr-[65px] lg:pl-[95px] lg:pr-[95px] xl:pr-[120px] xl:pl-[120px] pl-5 pr-5 h-fit w-screen fixed z-50">
         <img src="logojr.png" class="h-[40px]"/>
@@ -80,7 +80,7 @@ function App() {
         </div>
 
       </main>
-      <footer class="h-[700px] md:h-[600px] flex flex-col items-center relative px-[25px] sm:px-[50px] xl:px-[90px]">
+      <footer class="bg-white h-[700px] md:h-[600px] flex flex-col items-center relative px-[25px] sm:px-[50px] xl:px-[90px] z-50">
         <p class="text-[#3148D2] font-[550] text-[30px] pt-[25px] lg:text-[40px]">Dr. Júnior Almeida</p>
         <p class="lg:text-[19px]">OAB/RJ n. 000.000</p>
 
@@ -92,7 +92,7 @@ function App() {
           </div>
           <img src="jr2.png" class="h-[200px] w-[200px] mt-[20px] rounded-[15px] xl:h-[300px] xl:w-[300px]" />
         </div>
-        <p class="text-[16px] sm:text-[21px] lg:text-[24px] mt-[20px] text-justify xl:hidden">Meu foco é garantir que os direitos dos consumidores sejam respeitados, com  excelência e comprometimento.</p>
+        <p class="text-[16px] sm:text-[21px] lg:text-[24px] mt-[20px] text-justify xl:hidden ">Meu foco é garantir que os direitos dos consumidores sejam respeitados, com  excelência e comprometimento.</p>
 
         <a class=" w-[313px] text-[22px] h-[70px] bg-[#3148D2] font-[450] flex justify-center items-center text-white gap-2 rounded-[15px] mt-[40px] cursor-pointer">
             Atendimento virtual <FaArrowRight class="flex justify-center items-center text-[19px]"/>
