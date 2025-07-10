@@ -88,7 +88,7 @@ function Atendimento() {
           <label class="w-[80%] mt-[15px] font-medium text-[14px] text-[#838385]">Qual produto ou serviço em questão? <span class="text-[#d23131]">*</span></label>
           <input onChange={(e) => setProduto(e.target.value)} class="bg-[#f3f3f3] w-[80%] h-[40px] rounded-lg p-5 mt-2"></input>
           <label class="w-[80%] mt-[15px] font-medium text-[14px] text-[#838385]">Quando o problema aconteceu?<span class="text-[#d23131]">*</span></label>
-          <input type="date" readonly id="date" name="date" min={dataInput} max="2025-12-31" onChange={(e) => setData(e.target.value)} className="bg-[#f3f3f3] w-[80%] h-[40px] rounded-lg p-5 mt-2 focus:outline-none focus:border-none"></input>
+          <input type="date" readonly id="date" name="date"  max="2025-12-31" onChange={(e) => setData(e.target.value)} className="bg-[#f3f3f3] w-[80%] h-[40px] rounded-lg p-5 mt-2 focus:outline-none focus:border-none"></input>
           <label class="w-[80%] mt-[15px] font-medium text-[14px] text-[#838385]">Você já tentou resolver diretamente com a empresa? Se sim, qual foi o resultado? <span class="text-[#d23131]">*</span></label>
           <input onChange={(e) => setResultado(e.target.value)}class="bg-[#f3f3f3] w-[80%] h-[40px] rounded-lg p-5 mt-2"></input>
           <label class="w-[80%] mt-[15px] font-medium text-[14px] text-[#838385]">O que você espera resolver com esta questão? <span class="text-[#d23131]">*</span></label>
