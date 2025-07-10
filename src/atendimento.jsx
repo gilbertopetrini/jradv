@@ -23,26 +23,9 @@ function Atendimento() {
 
   let dia = String(date.getDate()).padStart(2, '0');
   let mes = String(date.getMonth() + 1).padStart(2, '0');
-  let ano = date.getFullYear(); 
+  let ano = date.getFullYear();
 
-  let dataInput = `${ano}-${mes}-${dia}`; 
-
-  let verificadorData
-  let verificadorMes
-
-  if(mesS < mes){
-   verificadorData = false
-  } else {
-    verificadorData = true
-  }
-
-  if(diaS < dia){
-    verificadorMes = false
-  } else {
-    verificadorMes = true
-  }
-
-  let isFormComplete = nome && empresa && problema && produto && resolver && data && resultado && verificadorData && verificadorMes;
+  let isFormComplete = nome && empresa && problema && produto && resolver && data && resultado;
 
  const mensagem = `Olá, Dr. Júnior Almeida. Preenchi o formulário no seu site e gostaria de ajuda com meu caso. Aqui estão as informações:
 
