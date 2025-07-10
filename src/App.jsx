@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Atendimento from "./Atendimento"
+import Atendimento from "./atendimento"
 import Ldpage from "./ldpage"
 
 function App() {
