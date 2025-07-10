@@ -1,7 +1,11 @@
 import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Atendimento() {
+  const navigate = useNavigate();
+
   const [nome, setNome] = useState('');
   const [empresa, setEmpresa] = useState('');
   const [problema, setProblema] = useState('');
@@ -57,9 +61,12 @@ function Atendimento() {
   const linkWhatsApp = `https://wa.me/${numero}?text=${mensagemCodificada}`;
 
     return (
-      <div class="bg-[#3148D2] h-[1000px] flex justify-center items-center ">
+      <div class="bg-[#3148D2] h-[1000px] flex flex-col justify-center items-center ">
+        <div class="w-[80%] flex flex-row">
+          <a onClick={() => navigate('/')} class="bg-[#ffffff] text-[14px] cursor-pointer text-black w-[30%] h-[40px] rounded-lg p-2 mb-7 flex flex-row items-center justify-center">< FaArrowLeft class="mr-2 text-[10px]"/>Voltar</a>
+        </div>
         <div class="bg-white h-fit w-[80%] rounded-[25px] flex flex-col items-center pb-[50px]">
-
+          
           <p class="font-bold text-[22px] mt-[25px] w-[80%]">Informações necessárias</p>
           <label class="w-[80%] mt-[15px] font-medium text-[14px] text-[#838385]">Seu nome <span class="text-[#d23131]">*</span></label>
           <input onChange={(e) => setNome(e.target.value)} class="bg-[#f3f3f3] w-[80%] h-[40px] rounded-lg p-5 mt-2"></input>
@@ -96,7 +103,9 @@ function Atendimento() {
           </select>
 
           <button class="bg-[#3148D2] text-white w-[80%] h-[40px] rounded-lg p-5 mt-7 flex flex-row items-center justify-center" onClick={console.log(linkWhatsApp)}>Enviar <FaArrowRight class="ml-2 text-[12px]"/></button>
+          
         </div>
+        
       </div>
 )}
 
