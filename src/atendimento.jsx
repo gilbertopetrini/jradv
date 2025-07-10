@@ -42,7 +42,7 @@ function Atendimento() {
     verificadorMes = true
   }
 
-  let isFormComplete = nome && empresa && problema && produto && data && resultado && verificadorData && verificadorMes;
+  let isFormComplete = nome && empresa && problema && produto && resolver && data && resultado && verificadorData && verificadorMes;
 
  const mensagem = `Olá, Dr. Júnior Almeida. Preenchi o formulário no seu site e gostaria de ajuda com meu caso. Aqui estão as informações:
 
@@ -50,7 +50,7 @@ function Atendimento() {
   🏢 Empresa envolvida: ${empresa}
   📌 Tipo de problema: ${problema}
   🛍️ Produto ou serviço: ${produto}
-  📅 Data da compra ou do problema: ${dataformatada}
+  📅 Data do problema: ${dataformatada}
   💬 Tentei resolver com a empresa? ${resultado}
   🎯 O que eu espero resolver com essa questão: ${resolver}
 
@@ -102,8 +102,11 @@ function Atendimento() {
             <option value="Outro">Outro</option>
           </select>
 
-          <a class="bg-[#3148D2] text-white w-[80%] h-[40px] rounded-lg p-5 mt-7 flex flex-row items-center justify-center" href={linkWhatsApp}>Enviar <FaArrowRight class="ml-2 text-[12px]"/></a>
-          
+          {isFormComplete ? (
+                    <a class="bg-[#3148D2] text-white w-[80%] h-[40px] rounded-lg p-5 mt-7 flex flex-row items-center justify-center" href={linkWhatsApp}>Enviar <FaArrowRight class="ml-2 text-[12px]"/></a>
+                ) : (
+                    <a class="bg-[#575757] text-white w-[80%] h-[40px] rounded-lg p-5 mt-7 flex flex-row items-center justify-center">Enviar <FaArrowRight class="ml-2 text-[12px]"/></a>
+                )}        
         </div>
         
       </div>
