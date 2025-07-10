@@ -51,12 +51,12 @@ function Atendimento() {
   📌 Tipo de problema: ${problema}
   🛍️ Produto ou serviço: ${produto}
   📅 Data da compra ou do problema: ${dataformatada}
-  💬 Tentei resolver com a empresa? Resultado: ${resultado}
+  💬 Tentei resolver com a empresa? ${resultado}
   🎯 O que eu espero resolver com essa questão: ${resolver}
 
   Aguardo seu retorno. Obrigado!`;
 
-  const numero = '5521999999999'; // número com DDI e DDD
+  const numero = '5521999475386'; // número com DDI e DDD
   const mensagemCodificada = encodeURIComponent(mensagem);
   const linkWhatsApp = `https://wa.me/${numero}?text=${mensagemCodificada}`;
 
