@@ -43,7 +43,7 @@ function Ldpage() {
       <ToastContainer />
       <header class="flex items-center justify-between pt-5 md:pl-[65px] md:pr-[65px] lg:pl-[95px] lg:pr-[95px] xl:pr-[120px] xl:pl-[120px] pl-5 pr-5 h-fit w-screen fixed z-50">
         <img src="logojr.png" class="h-[40px]"/>
-        <button onClick={toggleVisibility} class="shadow-lg flex items-center text-white bg-[#3148D2] text-[12px] justify-center h-[26px] w-[100px]  rounded-lg">{isVisible ? 'Ocultar Menu' : 'Mostrar Menu'}</button>
+        <button onClick={toggleVisibility} class="shadow-md flex items-center text-white bg-[#3148D2] text-[12px] justify-center h-[26px] w-[100px]  rounded-lg">{isVisible ? 'Ocultar Menu' : 'Mostrar Menu'}</button>
       </header>
 
       <main class="h-fit md:pt-[60px] lg:pt-0 flex flex-col items-center  md:flex-row md:justify-center md:gap-[50px] lg:gap-[170px] xl:h-[800px] xl:gap-[330px] xl:pt-[50px] xl:pb-[60px]">
@@ -91,7 +91,7 @@ function Ldpage() {
       </main>
       <footer class="bg-white h-[700px] md:h-[600px] flex flex-col items-center relative px-[25px] sm:px-[50px] xl:px-[90px] z-50">
         <p class="text-[#3148D2] font-[550] text-[30px] pt-[25px] lg:text-[40px]">Dr. Júnior Almeida</p>
-        <p class="lg:text-[19px]">OAB/RJ n. 000.000</p>
+        <p class="lg:text-[19px]">OAB/RJ n. 219.362</p>
 
         <div class="flex items-center flex-col-reverse md:flex-row">
           <div class="xl:w-[800px]">
@@ -103,7 +103,7 @@ function Ldpage() {
         </div>
         <p class="text-[16px] sm:text-[21px] lg:text-[24px] mt-[20px] text-justify xl:hidden ">Meu foco é garantir que os direitos dos consumidores sejam respeitados, com  excelência e comprometimento.</p>
 
-        <a class=" w-[313px] text-[22px] h-[70px] bg-[#3148D2] font-[450] flex justify-center items-center text-white gap-2 rounded-[15px] mt-[40px] cursor-pointer">
+        <a onClick={() => navigate('/atendimento ')} class=" w-[313px] text-[22px] h-[70px] bg-[#3148D2] font-[450] flex justify-center items-center text-white gap-2 rounded-[15px] mt-[40px] cursor-pointer">
             Atendimento virtual <FaArrowRight class="flex justify-center items-center text-[19px]"/>
           </a>
       </footer>
