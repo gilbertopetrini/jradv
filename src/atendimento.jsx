@@ -46,13 +46,13 @@ function Atendimento() {
 
  const mensagem = `Olá, Dr. Júnior Almeida. Preenchi o formulário no seu site e gostaria de ajuda com meu caso. Aqui estão as informações:
 
-  👤 Meu nome: ${nome}
-  🏢 Empresa envolvida: ${empresa}
-  📌 Tipo de problema: ${problema}
-  🛍️ Produto ou serviço: ${produto}
-  📅 Data do problema: ${dataformatada}
-  💬 Tentei resolver com a empresa? ${resultado}
-  🎯 O que eu espero resolver com essa questão: ${resolver}
+  *Meu nome:* ${nome}
+  *Empresa envolvida:* ${empresa}
+  *Tipo de problema:* ${problema}
+  *Produto ou serviço:* ${produto}
+  *Data do problema:* ${dataformatada}
+  *Tentei resolver com a empresa?* ${resultado}
+  *O que eu espero resolver com essa questão:* ${resolver}
 
   Aguardo seu retorno. Obrigado!`;
 

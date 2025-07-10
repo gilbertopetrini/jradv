@@ -8,11 +8,12 @@ import { FaTiktok } from "react-icons/fa";
 import { FaPix } from "react-icons/fa6";
 import { ToastContainer, toast, Slide } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
-
+import { useState } from 'react';
 
 
 function Ldpage() {  
   const navigate = useNavigate();
+  const [isVisible, setIsVisible] = useState(true);
 
   function copiarTexto() {
       const texto = "116.318.197-80";
@@ -30,14 +31,19 @@ function Ldpage() {
       });
       notify();
     }
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
+
   return (
     <>
 
-      <span class="xl:bottom-[50px] xl:left-1/2 xl:-translate-x-1/2 backdrop-blur border-white/40 border flex flex-col xl:flex-row h-[220px] w-[50px] xl:w-[220px] xl:h-[50px] bg-white/30 text-white text-[35px] justify-center items-center rounded-[20px] gap-4 fixed bottom-4 right-4 z-40 shadow-lg"><FaInstagram class="text-[#3148D2] cursor-pointer z-40 " onClick={() => window.open("https://www.instagram.com/junioralmeida.rio", "_blank")}/><FaWhatsapp onClick={() => window.open("https://api.whatsapp.com/send?phone=5521965811001", "_blank")} class="text-[#3148D2] cursor-pointer"/><FaTiktok class="text-[#3148D2] cursor-pointer" onClick={() => window.open("https://www.tiktok.com/@adv.junioralmeida", "_blank")}/><FaPix class="text-[#3148D2] cursor-pointer" id="cpf" onClick={copiarTexto} /></span>
+      {isVisible && (<span class="xl:bottom-[50px] xl:left-1/2 xl:-translate-x-1/2 backdrop-blur border-white/40 border flex flex-col xl:flex-row h-[220px] w-[50px] xl:w-[220px] xl:h-[50px] bg-white/30 text-white text-[35px] justify-center items-center rounded-[20px] gap-4 fixed bottom-4 right-4 z-40 shadow-lg"><FaInstagram class="text-[#3148D2] cursor-pointer z-40 " onClick={() => window.open("https://www.instagram.com/junioralmeida.rio", "_blank")}/><FaWhatsapp onClick={() => window.open("https://api.whatsapp.com/send?phone=5521965811001", "_blank")} class="text-[#3148D2] cursor-pointer"/><FaTiktok class="text-[#3148D2] cursor-pointer" onClick={() => window.open("https://www.tiktok.com/@adv.junioralmeida", "_blank")}/><FaPix class="text-[#3148D2] cursor-pointer" id="cpf" onClick={copiarTexto} /></span>)}
       <ToastContainer />
-      <header class="flex justify-between pt-5 md:pl-[65px] md:pr-[65px] lg:pl-[95px] lg:pr-[95px] xl:pr-[120px] xl:pl-[120px] pl-5 pr-5 h-fit w-screen fixed z-50">
+      <header class="flex items-center justify-between pt-5 md:pl-[65px] md:pr-[65px] lg:pl-[95px] lg:pr-[95px] xl:pr-[120px] xl:pl-[120px] pl-5 pr-5 h-fit w-screen fixed z-50">
         <img src="logojr.png" class="h-[40px]"/>
-        <IoMenu class="text-[35px] text-[#3148D2]"/>
+        <button onClick={toggleVisibility} class="shadow-lg flex items-center text-white bg-[#3148D2] text-[12px] justify-center h-[26px] w-[100px]  rounded-lg">{isVisible ? 'Ocultar Menu' : 'Mostrar Menu'}</button>
       </header>
 
       <main class="h-fit md:pt-[60px] lg:pt-0 flex flex-col items-center  md:flex-row md:justify-center md:gap-[50px] lg:gap-[170px] xl:h-[800px] xl:gap-[330px] xl:pt-[50px] xl:pb-[60px]">
