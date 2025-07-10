@@ -10,7 +10,7 @@ import { ToastContainer, toast, Slide } from 'react-toastify';
 
 
 
-function App() {  
+function Ldpage() {  
   function copiarTexto() {
       const texto = "116.318.197-80";
       navigator.clipboard.writeText(texto)
@@ -102,4 +102,4 @@ function App() {
   )
 }
 
-export default App
+export default Ldpage
