@@ -102,7 +102,7 @@ function Atendimento() {
             <option value="Outro">Outro</option>
           </select>
 
-          <button class="bg-[#3148D2] text-white w-[80%] h-[40px] rounded-lg p-5 mt-7 flex flex-row items-center justify-center" onClick={console.log(linkWhatsApp)}>Enviar <FaArrowRight class="ml-2 text-[12px]"/></button>
+          <a class="bg-[#3148D2] text-white w-[80%] h-[40px] rounded-lg p-5 mt-7 flex flex-row items-center justify-center" href={linkWhatsApp}>Enviar <FaArrowRight class="ml-2 text-[12px]"/></a>
           
         </div>
         
