@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Ldpage() {  
   const navigate = useNavigate();
-  
+
   function copiarTexto() {
       const texto = "116.318.197-80";
       navigator.clipboard.writeText(texto)
@@ -56,7 +56,7 @@ function Ldpage() {
           <div class="bg-[#3148D2] w-[313px] lg:w-[440px] h-[317px] lg:h-[220px] md:h-[117px] relative rounded-[30px] flex justify-center mt-[160px] absolute md:bottom-[-110px] xl:bottom-[-150px]">
             <img src="jr.png" class="w-[300px] absolute bottom-0 lg:w-[350px] xl:w-[400px]"/>
           </div>
-          <a class="md:hidden w-[313px] text-[22px] h-[70px] bg-[#3148D2] font-[450] flex justify-center items-center text-white gap-2 rounded-[15px] mt-[30px] cursor-pointer">
+          <a onClick={() => navigate('/atendimento ')} class="md:hidden w-[313px] text-[22px] h-[70px] bg-[#3148D2] font-[450] flex justify-center items-center text-white gap-2 rounded-[15px] mt-[30px] cursor-pointer">
           Atendimento virtual <FaArrowRight class="flex justify-center items-center text-[19px]"/>
         </a>
           <p class="md:hidden flex items-center text-[#2B2B2B] text-[14px] mt-4"><FaSquare class="text-[7px] text-[#3148D2] mr-2"/>Atendimento 24 horas</p>
