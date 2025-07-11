@@ -86,7 +86,7 @@ function Ldpage() {
       <button onClick={toggleVisibility} class="xl:bottom-[50px] xl:left-1/2 xl:-translate-x-1/2 backdrop-blur 
       border-white/40 border flex flex-col xl:flex-row h-[50px] w-[50px] xl:w-[220px] 
       xl:h-[50px] bg-white/30 text-[#3148D2] text-[35px] justify-center items-center rounded-[20px] 
-      gap-4 fixed bottom-4 right-4 z-30 shadow-lg">
+      gap-4 fixed bottom-4 right-4 z-30 shadow-lg lg:hidden">
         {isVisible ? <IoMdClose /> : <IoIosArrowUp />}
       </button>
       
@@ -97,7 +97,7 @@ function Ldpage() {
         <a onClick={toggleVisibility2} class="flex flex-row justify-center items-center animate-scale-pulse shadow-md flex items-center text-white bg-[#3148D2] text-[15px] justify-center h-[35px] w-[180px]  rounded-lg"> Iniciar Atendimento <FaArrowRight class="flex ml-[5px] justify-center items-center text-[12px]"/></a>
       </header>
 
-      <main class="h-fit md:pt-[60px] lg:pt-0 flex flex-col items-center  md:flex-row md:justify-center md:gap-[50px] lg:gap-[170px] xl:h-fit xl:gap-[180px] xl:pt-[50px] xl:pb-[60px]">
+      <main class="2xl:h-screen 2xl:gap-[280px] h-fit md:pt-[60px] lg:pt-0 flex flex-col items-center  md:flex-row md:justify-center md:gap-[50px] lg:gap-[170px] xl:h-fit xl:gap-[180px] xl:pt-[50px] xl:pb-[60px]">
         <div>
           <p class="pt-[110px] text-[#3148D2] font-[550] leading-none md:leading-[45px] lg:leading-[60px] xl:leading-[80px] text-[35px] text-center mb-5 md:text-left lg:text-[45px] xl:text-[60px] ">Descomplique seus <br/>Direitos de Consumidor.</p>
           <p class="text-[#2B2B2B] leading-tight font-[450] text-[20px] mt-[30px] text-center md:text-left lg:text-[30px] xl:text-[35px]">Ajudo você a entender e garantir que <br/>seus direitos sejam respeitados.</p>
@@ -148,7 +148,7 @@ requisitos?</p>
         </div>
 
       </main>
-      <footer class="bg-white h-[600px] md:h-[600px] flex flex-col items-center relative px-[25px] sm:px-[50px] xl:px-[90px] xl:h-screen">
+      <footer class="bg-white h-[600px] md:h-[600px] flex flex-col items-center relative px-[25px] sm:px-[50px] xl:px-[90px]">
         <p class="text-[#3148D2] font-[550] text-[30px] pt-[25px] lg:text-[40px]">Dr. Júnior Almeida</p>
         <p class="lg:text-[19px]">OAB/RJ n. 219.362</p>
 
