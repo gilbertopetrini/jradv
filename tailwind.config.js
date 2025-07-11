@@ -8,6 +8,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        scalePulse: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.018)' },
+        }
+      },
+      animation: {
+        'scale-pulse': 'scalePulse 1s ease-in-out infinite',
+      },
       colors: {
         'mainb': '#3148D2',
       },

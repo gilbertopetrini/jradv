@@ -7,11 +7,19 @@ import { FaPix } from "react-icons/fa6";
 import { ToastContainer, toast, Slide } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { IoMdClose } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
 
-function Ldpage() {  
+function Ldpage() { 
   const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(true);
-  const [nomew, setNomew] = useState('nome');
+  const [isVisible2, setIsVisible2] = useState(false);
+  const [nome, setNome] = useState('');
+
+  function continuar() {
+    localStorage.setItem('nome', nome); // salva o nome
+    navigate('/atendimento'); // navega para outra página
+  };
 
   function copiarTexto() {
       const texto = "116.318.197-80";
@@ -27,24 +35,66 @@ function Ldpage() {
         theme: "light",
         transition: Slide,
       });
-      notify();
     }
 
-  const mensagem = `Olá Dr. Júnior! Me chamo ${nomew}. Vim pelo seu site e preciso da sua ajuda.`;
-  const linkWhatsApp = `https://wa.me/send?phone=5521965811001&text=${mensagem}`;
+    const mensagem = `Olá Dr. Júnior! Me chamo ${nome}. Vim pelo seu site e preciso da sua ajuda.`;
+    const linkWhatsApp = `https://wa.me/send?phone=5521965811001&text=${mensagem}`;
   
-  const toggleVisibility = () => {
-    setIsVisible(!isVisible);
-  };
+    const toggleVisibility = () => {
+      setIsVisible(!isVisible);
+    };
 
+    const toggleVisibility2 = () => {
+      setIsVisible2(!isVisible2);
+    };
+
+  let nomeDigitado = nome;
+  
   return (
     <>
-
-      {isVisible && (<span class="xl:bottom-[50px] xl:left-1/2 xl:-translate-x-1/2 backdrop-blur border-white/40 border flex flex-col xl:flex-row h-[220px] w-[50px] xl:w-[220px] xl:h-[50px] bg-white/30 text-white text-[35px] justify-center items-center rounded-[20px] gap-4 fixed bottom-4 right-4 z-40 shadow-lg"><a href={linkWhatsApp} target="_blank" class="text-[#3148D2] cursor-pointer"> <FaWhatsapp/> </a><FaInstagram class="text-[#3148D2] cursor-pointer z-40 " onClick={() => window.open("https://www.instagram.com/junioralmeida.rio", "_blank")}/><FaTiktok class="text-[#3148D2] cursor-pointer" onClick={() => window.open("https://www.tiktok.com/@adv.junioralmeida", "_blank")}/><FaPix class="text-[#3148D2] cursor-pointer" id="cpf" onClick={copiarTexto} /></span>)}
       <ToastContainer />
-      <header class="flex items-center justify-between pt-5 md:pl-[65px] md:pr-[65px] lg:pl-[95px] lg:pr-[95px] xl:pr-[120px] xl:pl-[120px] pl-5 pr-5 h-fit w-screen fixed z-50">
+
+      {isVisible2 ? (<div className="fixed h-[100%] w-[100%] bg-black/70 top-0 left-0 z-40 flex justify-center items-center " onClick={toggleVisibility2}>
+        <div onClick={(e) => e.stopPropagation()} className="flex flex-col items-center justify-center bg-white h-fit w-[80%] z-50 rounded-2xl shadow-2xl py-[35px]">
+          <label className="text-[#838385] text-[20px] w-[90%]">Ensira seu primeiro nome:</label>
+          <input onChange={(e) => setNome(e.target.value)} type="text" maxLength={25} class="focus:outline-none focus:border-none h-[50px] w-[90%] bg-[#F3F3F3] rounded-lg my-[15px] p-5"></input>
+          {nomeDigitado ? (<button onClick={continuar} class="h-[50px] w-[90%] bg-[#3148D2] focus:outline-none focus:border-none rounded-lg mt-[15px] flex items-center justify-center text-white text-[20px]"><FaArrowRight/></button>) : (<button class="h-[50px] w-[90%] bg-[#575757] focus:outline-none focus:border-none rounded-lg mt-[15px] flex items-center justify-center text-white text-[20px]"><FaArrowRight/></button>)}
+        </div>
+      </div>) : (<div></div>)}
+
+      {isVisible && (
+        
+      <span class="xl:bottom-[50px] xl:left-1/2 xl:-translate-x-1/2 backdrop-blur 
+      border-white/40 border flex flex-col xl:flex-row h-[220px] w-[50px] xl:w-[220px] 
+      xl:h-[50px] bg-white/30 text-white text-[35px] justify-center items-center rounded-[20px] 
+      gap-4 fixed bottom-[80px] right-4 z-30 shadow-lg"
+      >
+        
+      <a href={linkWhatsApp} target="_blank" class="text-[#3148D2] cursor-pointer"> 
+        <FaWhatsapp/>
+      </a>
+
+      <FaInstagram class="text-[#3148D2] cursor-pointer z-30 " onClick={() => window.open("https://www.instagram.com/junioralmeida.rio", "_blank")}/>
+
+      <FaTiktok class="text-[#3148D2] cursor-pointer" onClick={() => window.open("https://www.tiktok.com/@adv.junioralmeida", "_blank")}/>
+
+      <FaPix class="text-[#3148D2] cursor-pointer" id="cpf" onClick={copiarTexto} />
+      
+      </span>
+      
+      )}
+      <button onClick={toggleVisibility} class="xl:bottom-[50px] xl:left-1/2 xl:-translate-x-1/2 backdrop-blur 
+      border-white/40 border flex flex-col xl:flex-row h-[50px] w-[50px] xl:w-[220px] 
+      xl:h-[50px] bg-white/30 text-[#3148D2] text-[35px] justify-center items-center rounded-[20px] 
+      gap-4 fixed bottom-4 right-4 z-30 shadow-lg">
+        {isVisible ? <IoMdClose /> : <IoIosArrowUp />}
+      </button>
+      
+
+      
+      <header class="flex items-center justify-between pt-5 md:pl-[65px] md:pr-[65px] lg:pl-[95px] lg:pr-[95px] xl:pr-[120px] xl:pl-[120px] pl-5 pr-5 h-fit w-screen fixed z-30">
         <img src="logojr.png" class="h-[40px]"/>
-        <button onClick={toggleVisibility} class="shadow-md flex items-center text-white bg-[#3148D2] text-[12px] justify-center h-[26px] w-[100px]  rounded-lg">{isVisible ? 'Ocultar Menu' : 'Mostrar Menu'}</button>
+        <a onClick={toggleVisibility2} class="flex flex-row justify-center items-center animate-scale-pulse shadow-md flex items-center text-white bg-[#3148D2] text-[15px] justify-center h-[35px] w-[180px]  rounded-lg"> Iniciar Atendimento <FaArrowRight class="flex ml-[5px] justify-center items-center text-[12px]"/></a>
       </header>
 
       <main class="h-fit md:pt-[60px] lg:pt-0 flex flex-col items-center  md:flex-row md:justify-center md:gap-[50px] lg:gap-[170px] xl:h-fit xl:gap-[180px] xl:pt-[50px] xl:pb-[60px]">
@@ -98,7 +148,7 @@ requisitos?</p>
         </div>
 
       </main>
-      <footer class="bg-white h-[700px] md:h-[600px] flex flex-col items-center relative px-[25px] sm:px-[50px] xl:px-[90px] xl:h-screen">
+      <footer class="bg-white h-[650px] md:h-[600px] flex flex-col items-center relative px-[25px] sm:px-[50px] xl:px-[90px] xl:h-screen">
         <p class="text-[#3148D2] font-[550] text-[30px] pt-[25px] lg:text-[40px]">Dr. Júnior Almeida</p>
         <p class="lg:text-[19px]">OAB/RJ n. 219.362</p>
 
@@ -110,10 +160,6 @@ requisitos?</p>
           <img src="jr2.png" class="h-[200px] w-[200px] mt-[20px] rounded-[15px] xl:h-[300px] xl:w-[300px] shadow-md" />
         </div>
         <p class="text-[16px] sm:text-[21px] lg:text-[24px] mt-[20px] text-justify xl:hidden ">Meu foco é garantir que os direitos dos consumidores sejam respeitados, com  excelência e comprometimento.</p>
-
-        <a onClick={() => navigate('/atendimento ')} class=" w-[313px] text-[22px] h-[70px] bg-[#3148D2] font-[450] flex justify-center items-center text-white gap-2 rounded-[15px] mt-[40px] cursor-pointer">
-            Atendimento virtual <FaArrowRight class="flex justify-center items-center text-[19px]"/>
-          </a>
       </footer>
     </>
   )
