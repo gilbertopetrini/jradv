@@ -148,7 +148,7 @@ requisitos?</p>
         </div>
 
       </main>
-      <footer class="bg-white h-[650px] md:h-[600px] flex flex-col items-center relative px-[25px] sm:px-[50px] xl:px-[90px] xl:h-screen">
+      <footer class="bg-white h-[600px] md:h-[600px] flex flex-col items-center relative px-[25px] sm:px-[50px] xl:px-[90px] xl:h-screen">
         <p class="text-[#3148D2] font-[550] text-[30px] pt-[25px] lg:text-[40px]">Dr. Júnior Almeida</p>
         <p class="lg:text-[19px]">OAB/RJ n. 219.362</p>
 
