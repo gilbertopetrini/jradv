@@ -38,7 +38,7 @@ function Ldpage() {
     }
 
     const mensagem = `Olá Dr. Júnior! Me chamo ${nome}. Vim pelo seu site e preciso da sua ajuda.`;
-    const linkWhatsApp = `https://wa.me/send?phone=5521965811001&text=${mensagem}`;
+    const linkWhatsApp = `https://wa.me/5521965811001?text=${mensagem}`;
   
     const toggleVisibility = () => {
       setIsVisible(!isVisible);

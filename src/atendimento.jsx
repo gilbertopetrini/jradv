@@ -18,7 +18,7 @@ function Atendimento() {
   function CriaLink(resto) {
     const numero = "5521965811001";
     const mensagem = `Olá Dr. Junior, me chamo ${nome}${resto}`;
-    const link = `https://wa.me/${numero}&text=${encodeURIComponent(mensagem)}`;
+    const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
     window.open(link, "_blank"); // ou redirecionar com window.location.href = link
   }
   return (
