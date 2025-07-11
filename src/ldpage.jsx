@@ -55,10 +55,10 @@ function Ldpage() {
       <ToastContainer />
 
       {isVisible2 ? (<div className="fixed h-[100%] w-[100%] bg-black/70 top-0 left-0 z-40 flex justify-center items-center " onClick={toggleVisibility2}>
-        <div onClick={(e) => e.stopPropagation()} className="flex flex-col items-center justify-center bg-white h-fit w-[80%] z-50 rounded-2xl shadow-2xl py-[35px]">
+        <div onClick={(e) => e.stopPropagation()} className="flex flex-col items-center justify-center bg-white h-fit w-[80%] xl:w-[50%] z-50 rounded-2xl shadow-2xl py-[35px]">
           <label className="text-[#838385] text-[20px] w-[90%]">Ensira seu primeiro nome:</label>
           <input onChange={(e) => setNome(e.target.value)} type="text" maxLength={25} class="focus:outline-none focus:border-none h-[50px] w-[90%] bg-[#F3F3F3] rounded-lg my-[15px] p-5"></input>
-          {nomeDigitado ? (<button onClick={continuar} class="h-[50px] w-[90%] bg-[#3148D2] focus:outline-none focus:border-none rounded-lg mt-[15px] flex items-center justify-center text-white text-[20px]"><FaArrowRight/></button>) : (<button class="h-[50px] w-[90%] bg-[#575757] focus:outline-none focus:border-none rounded-lg mt-[15px] flex items-center justify-center text-white text-[20px]"><FaArrowRight/></button>)}
+          {nomeDigitado ? (<button onClick={continuar} class="h-[50px] w-[90%] bg-[#3148D2] focus:outline-none focus:border-none rounded-lg mt-[15px] flex items-center justify-center text-white text-[20px]"><FaArrowRight/></button>) : (<button class="h-[50px] w-[90%] bg-[#575757] focus:outline-none focus:border-none rounded-lg mt-[15px] cursor-auto flex items-center justify-center text-white text-[20px]"><FaArrowRight/></button>)}
         </div>
       </div>) : (<div></div>)}
 
@@ -94,7 +94,7 @@ function Ldpage() {
       
       <header class="flex items-center justify-between pt-5 md:pl-[65px] md:pr-[65px] lg:pl-[95px] lg:pr-[95px] xl:pr-[120px] xl:pl-[120px] pl-5 pr-5 h-fit w-screen fixed z-30">
         <img src="logojr.png" class="h-[40px]"/>
-        <a onClick={toggleVisibility2} class="flex flex-row justify-center items-center animate-scale-pulse shadow-md flex items-center text-white bg-[#3148D2] text-[15px] justify-center h-[35px] w-[180px]  rounded-lg"> Iniciar Atendimento <FaArrowRight class="flex ml-[5px] justify-center items-center text-[12px]"/></a>
+        <a onClick={toggleVisibility2} class="cursor-pointer flex flex-row justify-center items-center animate-scale-pulse shadow-md flex items-center text-white bg-[#3148D2] text-[15px] justify-center h-[35px] w-[180px]  rounded-lg"> Iniciar Atendimento <FaArrowRight class="flex ml-[5px] justify-center items-center text-[12px]"/></a>
       </header>
 
       <main class="2xl:h-screen 2xl:gap-[280px] h-fit md:pt-[60px] lg:pt-0 flex flex-col items-center  md:flex-row md:justify-center md:gap-[50px] lg:gap-[170px] xl:h-fit xl:gap-[180px] xl:pt-[50px] xl:pb-[60px]">
@@ -102,7 +102,7 @@ function Ldpage() {
           <p class="pt-[110px] text-[#3148D2] font-[550] leading-none md:leading-[45px] lg:leading-[60px] xl:leading-[80px] text-[35px] text-center mb-5 md:text-left lg:text-[45px] xl:text-[60px] ">Descomplique seus <br/>Direitos de Consumidor.</p>
           <p class="text-[#2B2B2B] leading-tight font-[450] text-[20px] mt-[30px] text-center md:text-left lg:text-[30px] xl:text-[35px]">Ajudo você a entender e garantir que <br/>seus direitos sejam respeitados.</p>
 
-          <a onChange={(e) => setNome(e.target.value)} class=" w-[313px] text-[22px] h-[70px] bg-[#3148D2] font-[450] flex justify-center items-center text-white gap-2 rounded-[15px] mt-[40px] cursor-pointer hidden md:flex">
+          <a onClick={toggleVisibility2} class=" w-[313px] text-[22px] h-[70px] bg-[#3148D2] font-[450] flex justify-center items-center text-white gap-2 rounded-[15px] mt-[40px] cursor-pointer hidden md:flex">
             Iniciar Atendimento <FaArrowRight class="flex justify-center items-center text-[19px]"/>
           </a>
           <p class="flex items-center text-[#2B2B2B] text-[14px] mt-[30px] hidden ml-2 md:flex"><FaSquare class="text-[7px] text-[#3148D2] mr-2 "/>Atendimento 24 horas</p>
@@ -113,7 +113,7 @@ function Ldpage() {
           <div class="bg-[#3148D2] w-[313px] lg:w-[440px] h-[317px] lg:h-[220px] md:h-[117px] relative rounded-[30px] flex justify-center mt-[160px] absolute md:bottom-[-110px] xl:bottom-[-150px]">
             <img src="jr.png" class="w-[300px] absolute bottom-0 lg:w-[350px] xl:w-[400px]"/>
           </div>
-          <a onChange={(e) => setNome(e.target.value)} class="md:hidden w-[313px] text-[22px] h-[70px] bg-[#3148D2] font-[450] flex justify-center items-center text-white gap-2 rounded-[15px] mt-[30px] cursor-pointer">
+          <a onClick={toggleVisibility2} class="md:hidden w-[313px] text-[22px] h-[70px] bg-[#3148D2] font-[450] flex justify-center items-center text-white gap-2 rounded-[15px] mt-[30px] cursor-pointer">
             Iniciar Atendimento <FaArrowRight class="flex justify-center items-center text-[19px]"/>
           </a>
           <p class="md:hidden flex items-center text-[#2B2B2B] text-[14px] mt-4"><FaSquare class="text-[7px] text-[#3148D2] mr-2"/>Atendimento 24 horas</p>
