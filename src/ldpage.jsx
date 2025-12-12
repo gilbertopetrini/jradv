@@ -124,25 +124,25 @@ function Ldpage() {
 
       <main class="h-fit py-[50px] bg-[#3148D2] mt-[50px] flex flex-col justify-center items-center gap-[40px] relative">
         <img src="wpp.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover opacity-20 pointer-events-none" />
-        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-[130px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
+        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-fit bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
           <p class="text-[#3148D2] font-[550] text-[17px] leading-[20px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] xl:w-[700px] leading-[25px] ">Foi endividado por uma dívida que não reconhece?</p>
           <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >O consumidor tem direito à imediata exclusão do registro e reparação pelos
 prejuízos.
 </p>  
         </div>
 
-        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px]  md:h-[160px] h-[145px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
+        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px]  md:h-[160px] h-fit bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
           <p class="text-[#3148D2] font-[550] text-[17px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] xl:w-[700px] leading-[20px] md:leading-[30px]">Teve o pagamento do seguro recusado mesmo cumprindo os
 requisitos?</p>
           <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >Se você pagou corretamente, pode exigir o contrato ou indenização. Recusa sem motivo é abusiva.</p>  
         </div>
 
-        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-[140px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
+        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-fit bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
           <p class="text-[#3148D2] font-[550] text-[17px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] xl:w-[700px] leading-[20px] ">Instagram hackeado ou desativado?</p>
           <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >O bloqueio injusto de contas em redes sociais fere direitos e pode causar prejuízos. É possível notificar a plataforma e buscar reparação judicial.</p>  
         </div>
 
-        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-[125px] bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
+        <div class="w-[312px] md:w-[760px] lg:md:w-[1000px] h-fit bg-white  rounded-[15px] p-[15px] lg:p-[30px] flex flex-col justify-center z-10">
           <p class="text-[#3148D2] font-[550] text-[17px] md:text-[25px] lg:text-[27px] w-[220px] md:w-[500px] xl:w-[700px] leading-[25px] ">Caiu no golpe do PIX?</p>
           <p class="text-[#2B2B2B] text-[15px] md:text-[22px] lg:text-[24px] leading-[17px] md:leading-[26px] mt-[7px] lg:mt-[15px]" >O Golpe do PIX acontece por fraude ou engano. A vítima pode exigir devolução imediata e indenização por danos morais.</p>  
         </div>
